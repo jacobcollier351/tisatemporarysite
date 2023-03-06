@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://www.maying.co/user -->
+<html lang="en" class=" no-touchevents"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<meta name="theme-color" content="#ff9800">
+	<title>MAYING</title>
+	<!-- css -->
+	<link href="./MAYING_files/base.min.css" rel="stylesheet">
+	<link href="./MAYING_files/project.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./MAYING_files/sweetalert2.min.css">
+    <script src="./MAYING_files/sweetalert2.all.min.js"></script><style>.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;background:#fff;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;width:auto;height:auto;margin:0 .3125em}.swal2-popup.swal2-toast .swal2-styled{margin:0 .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(50,100,150,.4)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-no-transition{transition:none!important}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:.3125em;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-actions.swal2-loading .swal2-styled.swal2-confirm{box-sizing:border-box;width:2.5em;height:2.5em;margin:.46875em;padding:0;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:.25em solid transparent;border-radius:100%;border-color:transparent;background-color:transparent!important;color:transparent;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-actions.swal2-loading .swal2-styled.swal2-cancel{margin-right:30px;margin-left:30px}.swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after{content:"";display:inline-block;width:15px;height:15px;margin-left:5px;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:3px solid #999;border-radius:50%;border-right-color:transparent;box-shadow:1px 1px 1px #fff}.swal2-styled{margin:.3125em;padding:.625em 2em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#3085d6;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#aaa;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(50,100,150,.4)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-timer-progress-bar{position:absolute;bottom:0;left:0;width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;align-items:center;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:0;outline:initial;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close::-moz-focus-inner{border:0}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0;color:#545454;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 3px #c4e6f5}.swal2-file::-webkit-input-placeholder,.swal2-input::-webkit-input-placeholder,.swal2-textarea::-webkit-input-placeholder{color:#ccc}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::-ms-input-placeholder,.swal2-input::-ms-input-placeholder,.swal2-textarea::-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-validation-message{display:none;align-items:center;justify-content:center;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{align-items:center;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;width:2em;height:2em;border-radius:2em;background:#3085d6;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#3085d6}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;width:2.5em;height:.4em;margin:0 -1px;background:#3085d6}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-moz-document url-prefix(){.swal2-close:focus{outline:2px solid rgba(50,100,150,.4)}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent!important}body.swal2-no-backdrop .swal2-container>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-container.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-top-left,body.swal2-no-backdrop .swal2-container.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-top-end,body.swal2-no-backdrop .swal2-container.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-container.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-left,body.swal2-no-backdrop .swal2-container.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-end,body.swal2-no-backdrop .swal2-container.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom-left,body.swal2-no-backdrop .swal2-container.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-bottom-end,body.swal2-no-backdrop .swal2-container.swal2-bottom-right{right:0;bottom:0}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}</style>
+
+	<!-- favicon -->
+	<style>
+		.pagination {
+			display:inline-block;
+			padding-left:0;
+			margin:20px 0;
+			border-radius:4px
+		}
+		.pagination>li {
+			display:inline
+		}
+		.pagination>li>a,.pagination>li>span {
+			position:relative;
+			float:left;
+			padding:6px 12px;
+			margin-left:-1px;
+			line-height:1.42857143;
+			color:#337ab7;
+			text-decoration:none;
+			background-color:#fff;
+			border:1px solid #ddd
+		}
+		.pagination>li:first-child>a,.pagination>li:first-child>span {
+			margin-left:0;
+			border-top-left-radius:4px;
+			border-bottom-left-radius:4px
+		}
+		.pagination>li:last-child>a,.pagination>li:last-child>span {
+			border-top-right-radius:4px;
+			border-bottom-right-radius:4px
+		}
+		.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover {
+			color:#23527c;
+			background-color:#eee;
+			border-color:#ddd
+		}
+		.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover {
+			z-index:2;
+			color:#fff;
+			cursor:default;
+			background-color:#337ab7;
+			border-color:#337ab7
+		}
+		.pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span,.pagination>.disabled>span:focus,.pagination>.disabled>span:hover {
+			color:#777;
+			cursor:not-allowed;
+			background-color:#fff;
+			border-color:#ddd
+		}
+		.pagination-lg>li>a,.pagination-lg>li>span {
+			padding:10px 16px;
+			font-size:18px
+		}
+		.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span {
+			border-top-left-radius:6px;
+			border-bottom-left-radius:6px
+		}
+		.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span {
+			border-top-right-radius:6px;
+			border-bottom-right-radius:6px
+		}
+		.pagination-sm>li>a,.pagination-sm>li>span {
+			padding:5px 10px;
+			font-size:12px
+		}
+		.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span {
+			border-top-left-radius:3px;
+			border-bottom-left-radius:3px
+		}
+		.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span {
+			border-top-right-radius:3px;
+			border-bottom-right-radius:3px
+		}
+		.pager {
+			padding-left:0;
+			margin:20px 0;
+			text-align:center;
+			list-style:none
+		}
+		.pager li {
+			display:inline
+		}
+		.pager li>a,.pager li>span {
+			display:inline-block;
+			padding:5px 14px;
+			background-color:#fff;
+			border:1px solid #ddd;
+			border-radius:15px
+		}
+		.pager li>a:focus,.pager li>a:hover {
+			text-decoration:none;
+			background-color:#eee
+		}
+		.pager .next>a,.pager .next>span {
+			float:right
+		}
+		.pager .previous>a,.pager .previous>span {
+			float:left
+		}
+		.pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span {
+			color:#777;
+			cursor:not-allowed;
+			background-color:#fff
+		}	
+		.pagination>li>a,
+		.pagination>li>span {
+		  border: 1px solid white;
+		}
+		.pagination>li.active>a {
+		  background: #f50057;
+		  color: #fff;
+		}
+		.pagination>li>a {
+		  background: white;
+		  color: #000;
+		}
+		.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+			color: #fff;
+			background-color: #000;
+			border-color: #000;
+		}
+		.pagination>.active>span {
+		  background-color: #f50057;
+		  color: #fff;
+		  border-color: #fff;
+		}
+		.pagination > .disabled > span {
+		  border-color: #fff;
+		}
+		pre {
+			white-space: pre-wrap;
+			word-wrap: break-word;
+		}
+		.progress-green .progress-bar {
+			background-color: #f0231b;
+		}
+		.progress-green {
+			background-color: #000;
+		}
+		.progress-green .progress-bar {
+			background-color: #ff0a00;
+		}
+		.page-orange .ui-content-header {
+			background-image: url(/theme/material/css/images/bg/amber.jpg);
+		}
+		.content-heading {
+			font-weight: 300;
+			color: #fff;
+		}		
+	</style>
+</head>
+<body class="page-orange">
+	<header class="header header-orange header-transparent header-waterfall ui-header affix">
+		<ul class="nav nav-list pull-left">
+			<div>
+				<a data-toggle="menu" href="https://www.maying.co/user#ui_menu">
+					<span class="icon icon-lg text-white">menu</span>
+				</a>
+			</div>
+		</ul>
+		<ul class="nav nav-list pull-right">
+			<div class="dropdown margin-right">
+				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+									<span class="access-hide">whirlwindy</span>
+					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="./MAYING_files/Avatar.jpg"></span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li>
+							<a class="padding-right-lg waves-attach waves-effect" href="https://www.maying.co/user/"><span class="icon icon-lg margin-right">account_box</span>用户中心</a>
+						</li>
+						<li>
+							<a class="padding-right-lg waves-attach waves-effect" href="https://www.maying.co/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a>
+						</li>
+					</ul>
+					
+			</div>
+		</ul>
+	</header>
+	<nav aria-hidden="true" class="menu menu-left nav-drawer nav-drawer-md" id="ui_menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="https://www.maying.co/" "=""><i class="icon icon-lg">person_pin_circle</i>&nbsp;用户面板</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach waves-effect" data-toggle="collapse" href="https://www.maying.co/user#ui_menu_me" onmousemove="this.style.backgroundColor=&#39;#ffcccc">我的</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_me">
+							<li>
+								<a href="https://www.maying.co/user">
+									<i class="icon icon-lg">recent_actors</i>&nbsp;首页
+								</a>
+							</li>
+							<li>
+								<a href="https://www.maying.co/user/profile">
+									<i class="icon icon-lg">info</i>&nbsp;账户信息
+								</a>
+							</li>
+							<li>
+								<a href="https://www.maying.co/user/edit">
+									<i class="icon icon-lg">sync_problem</i>&nbsp;资料编辑
+								</a>
+							</li>
+							<li>
+								<a href="https://www.maying.co/user/invite">
+									<i class="icon icon-lg">loyalty</i>&nbsp;邀请码
+								</a>
+							</li>
+							<li>
+								<a href="https://www.maying.co/user/announcement">
+									<i class="icon icon-lg">announcement</i>&nbsp;查看公告
+								</a>
+							</li>
+							<li>
+								<a href="https://docs.nameless13.com/" target="_blank">
+									<i class="icon icon-lg">announcement</i>&nbsp;使用教程
+								</a>
+							</li>
+													</ul>
+						<a class="waves-attach waves-effect" data-toggle="collapse" href="https://www.maying.co/user#ui_menu_use">使用</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_use">
+							<li>
+								<a href="https://www.maying.co/user/node">
+									<i class="icon icon-lg">router</i>&nbsp;节点列表
+								</a>
+							</li>
+							
+							<li>
+								<a href="https://www.maying.co/user/trafficlog">
+									<i class="icon icon-lg">traffic</i>&nbsp;流量记录
+								</a>
+							</li>
+
+						</ul>
+						<a class="waves-attach waves-effect" data-toggle="collapse" href="https://www.maying.co/user#ui_menu_help">交易</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_help">
+							<li>
+								<a href="https://www.maying.co/user/shop">
+									<i class="icon icon-lg">shop</i>&nbsp;商店
+								</a>
+							</li>
+							<li><a href="https://www.maying.co/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li>
+							<li>
+								<a href="https://www.maying.co/user/code" target="_blank">
+									<i class="icon icon-lg">code</i>&nbsp;充值
+								</a>
+							</li>
+						</ul>
+                      <a class="waves-attach waves-effect" data-toggle="collapse" href="https://www.maying.co/user#ui_menu_detect">审计</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_detect">
+							<!-- <li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li> -->
+							<li><a href="https://www.maying.co/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
+						</ul>
+						<a class="waves-attach waves-effect" href="https://www.maying.co/user/logout">退出系统</a>
+						                      
+                                                                
+                   
+                                                                
+                                                                
+                                                                
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">用户中心</h1>
+			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="ui-card-wrap">
+
+						<div class="col-lg-6 col-md-6">
+
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">系统中最新公告</p>
+										<p>其他公告请到<a href="https://www.maying.co/user/announcement">公告面板</a>查看。</p>
+																				<p></p><p>   由于上游BGP供应商的价格政策调整，我们的运营成本已大幅提升，为了保证服务体验、优化运营效率，我们将即刻进行套餐价格调整。调整后的价格请咨询服务BOT或群管理员，在2020年2月27日0点-3月1日10点之前注册并充值的新用户仍按照原价格开通套餐（续费按照新套餐价格），其余新老用户无论开通、续费均适用新调整后的套餐价格，感谢各位的理解与支持</p>
+<p>新套餐价格</p>
+<p>VIP3,季付180  node 30+/ 400G每月， 年付600  node 30+/ 500G每月，</p>
+<p>VIP4 半年付480 node 60+/ 800G每月，年付800  node 60+/ 900G每月</p>
+<p></p>
+																			</div>
+
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">连接信息 以及 All-in-One(快速配置指导)</p>
+										<p>您可以在这里查看您的连接信息。<br>同时，这里为您提供了自动化地配置文件生成，包含了所有 Shadowsocks 服务器的信息，方便您在诸多的服务器中快速添加，快速切换。</p>
+										<nav class="tab-nav margin-top-no">
+											<ul class="nav nav-list">
+												<li class="active">
+													<a class="waves-attach waves-effect" data-toggle="tab" href="https://www.maying.co/user#all_ssr"><i class="icon icon-lg">airplanemode_active</i>&nbsp;ShadowsocksR</a>
+												</li>
+											</ul>
+										<div class="tab-nav-indicator"></div></nav>
+										<div class="card-inner">
+											<div class="tab-content">
+												<div class="tab-pane fade active in" id="all_ssr">
+													
+													<nav class="tab-nav margin-top-no">
+														<ul class="nav nav-list">
+															<li class="active">
+																<a class="waves-attach waves-effect" data-toggle="tab" href="https://www.maying.co/user#all_ssr_windows" aria-expanded="true"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
+															</li>
+															<li class="">
+																<a class="waves-attach waves-effect" data-toggle="tab" href="https://www.maying.co/user#all_ssr_mac" aria-expanded="false"><i class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
+															</li>
+															<li>
+																<a class="waves-attach waves-effect" data-toggle="tab" href="https://www.maying.co/user#all_ssr_ios"><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS</a>
+															</li>
+															<li>
+																<a class="waves-attach waves-effect" data-toggle="tab" href="https://www.maying.co/user#all_ssr_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
+															</li>
+															<li>
+																<a class="waves-attach waves-effect" data-toggle="tab" href="https://www.maying.co/user#all_ssr_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
+															</li>
+														</ul>
+													<div class="tab-nav-indicator" style="left: 0px; right: 479px;"></div></nav>
+
+													<div class="tab-pane fade active in" id="all_ssr_windows">
+														<p>
+															Windows客户端：
+															</p><ol>
+																<li style="line-height:26px;"><a href="https://raw.nameless13.com/api/public/dl/uRjeavsM/SSR.7z">ShadowsocksR-Windows</a></li>
+																<li style="line-height:26px;"><a href="https://github.com/FQrabbit/SSTap-Rule/releases/download/SSTap%E5%B8%B8%E7%94%A8%E7%89%88%E6%9C%AC%E5%8F%8A%E5%8E%BB%E5%B9%BF%E5%91%8A/SSTap-beta-setup-1.0.9.7.exe.7z">SSTap-beta-setup-1.0.9.7</a></li>
+																<li style="line-height:26px;"><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">原版Clash</a><a style="color: #000;padding-left: 20px;" target="_blank" href="https://api.nameless13.com/">Clash订阅地址转换</a></li>
+															
+															</ol>
+														<p></p>
+
+														<p>SSR单端口多用户订阅地址：<br>
+                                                                                                                    </p><p>订阅地址(主)：<br><code style="font-size: 13px;">https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1 </code><br></p>
+                                                         	<p>订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&amp;token=u7g5cCYF0ZY2ibmY</code></p>	
+															
+															
+                                                          														<p></p>
+
+														<p>原版Clash(主)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sh%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+														<p>原版Clash(备)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sx/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sx%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+													</div>
+													<div class="tab-pane fade" id="all_ssr_mac">
+														<p>
+															MacOS 客户端：
+															</p><ol>
+																<li style="line-height:26px;"><a target="_blank" href="https://github.com/paradiseduo/ShadowsocksX-NG-R8/releases">ShadowsocksX-NG-R8</a></li>
+															
+																<li style="line-height:26px;"><a target="_blank" href="https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public">ClashX Pro</a></li>
+															</ol>
+														<p></p>
+														<p>SSR单端口多用户订阅地址：<br>
+                                                                                                                      </p><p>订阅地址(主)：<br><code style="font-size: 13px;">https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1</code><br></p>
+															
+															<p>	订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&amp;token=u7g5cCYF0ZY2ibmY</code>	
+                                                           														</p>
+														<p>ClashX(主)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sh%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+														<p>ClashX(备)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sx/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sx%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+													</div>
+													<div class="tab-pane fade" id="all_ssr_ios">
+														<p>
+															IOS 客户端(IOS客户端需要有美区或者港区的apple ID，并需付费下载，本站不提供下载账号)：
+															</p><ol>
+																<li style="line-height:26px;"><a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8" target="_blank">Shadowrocket</a> </li>
+																<li style="line-height:26px;"><a href="https://appsto.re/us/o1dOkb.i" target="_blank">Quantumult</a>&nbsp;&nbsp;目前美区暂时下架，可以在港区下载</li>
+																<li style="line-height:26px;"><a href="https://apps.apple.com/hk/app/quantumult-x/id1443988620">Quantumult X </a> </li>
+															</ol>
+														<p></p>
+														<p>SSR单端口多用户订阅地址：<br>
+                                                          															订阅地址(主)：<br><code>https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1</code><br>
+															订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&amp;token=u7g5cCYF0ZY2ibmY</code>		
+                                                           														</p>
+													</div>
+													<div class="tab-pane fade" id="all_ssr_android">
+														<p>
+															Android 手机客户端
+															</p><ol>
+																<li style="line-height:26px;"><a target="_blank" href="https://github.com/xxf098/shadowsocksr-v2ray-trojan-android/releases">ShadowsocksR-Android</a></li>
+																<li style="line-height:26px;"><a target="_blank" href="https://github.com/Kr328/ClashForAndroid/releases">原版Clash-Android app-arm64-v8a
+</a></li>													
+															</ol>
+														<p></p>
+														<p>SSR单端口多用户订阅地址：<br>
+                                                          															订阅地址(主)：<br><code>https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1</code><br>
+															订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&amp;token=u7g5cCYF0ZY2ibmY</code>	
+                                                           														</p>
+														<p>ClashX(主)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sh%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+														<p>ClashX(备)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sx/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sx%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+													</div>
+													<div class="tab-pane fade" id="all_ssr_router">
+														<p>
+															路由器插件：
+															</p><ol>
+																<li style="line-height:26px;"><a href="https://github.com/hq450/fancyss_history_package" target="_blank">Koolshare 固件路由器/软路由</a>
+																	</li>
+																<li style="line-height:26px;"><a href="https://drive.google.com/drive/folders/1dqNUrMf9n7i3y1aSh68U5Yf44WQ3KCuh">eSir-openwrt固件相关</a></li>
+																<li><a href="http://opt.cn2qq.com/padavan/">Padavan（老毛子）固件</a></li>
+															</ol>
+														<p></p>
+														订阅地址(主)：<br><code>https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1</code><br>
+														订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&amp;token=u7g5cCYF0ZY2ibmY</code>														
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-action">
+											<div class="card-action-btn pull-left">
+												<p><a class="btn btn-brand btn-flat waves-attach waves-effect" href="https://www.maying.co/user/url_reset"><span class="icon">close</span>&nbsp;重置订阅地址（重置订阅地址前请先在[资料编辑]里修改链接密码）</a></p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">帐号使用情况</p>
+										<dl class="dl-horizontal">
+										  <p></p><dt>帐号等级：
+																								<span style="color: #ff4081;">VIP5</span>
+												                                           	
+                                            </dt>
+											<p></p> 
+											<p></p><dt>等级过期时间：2023年08月09日</dt><p></p>
+											<p><span>流量重置日：23 号</span></p> 											<p>等级有效期：                                             
+                                              <span class="label-level-expire">剩余</span>
+											  <span id="days-level-expire" style="color: #ff4081;">155</span>
+                                              <span class="label-level-expire">天</span>
+                                            </p>
+								
+											<p></p><dt>速度限制：
+											<span>不限速</span>
+										       </dt>
+											<p></p>                                         
+                                            <p></p><dt>实时连接数：1 个</dt><p></p>
+                                          <p></p><dt>最大连接数：<span>
+                                            
+                                            												<span>6 个</span>
+												       
+                                            
+                                            
+                                             <!--
+                                            0 个</span> </dt></p>
+                                           -->
+                                          
+                                            <!-- <p><dt>最大设备数：
+											                                            <span>不限制</span>
+											</dt>
+										</p> -->
+                                          
+											<p></p></span></dt><dt>上次使用：2023年03月06日</dt><p></p>
+										</dl>
+										
+									</div>
+
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">流量使用情况</p>
+											<p></p><dt>总流量：1000GB</dt><p></p>
+											<p></p><dt>已使用： 34.42GB</dt><p></p> 
+											<!--<p><dt>已使用：34.42GB</dt></p> -->
+											<p></p><dt>剩余量： 965.58GB</dt><p></p>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">服务BOT</p>
+											<p></p><dt><a href="tg://resolve?domain=mayingbot" style="color: #ff4081;text-decoration:underline;">魅影极速套餐开通、升级服务Bot</a></dt><p></p>
+											<p></p><dt><a href="tg://resolve?domain=mayingsupportbot" style="color: #ff4081;text-decoration:underline;">客户服务BOT</a></dt><p></p> 
+										
+											
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">签到获取流量</p>
+											<p>流量不会重置，可以通过签到获取流量。</p>
+
+											<p>每次签到可以获取30~50MB流量。</p>
+
+											<p>每天可以签到一次。您可以点击按钮或者摇动手机来签到。</p>
+
+											<p>上次签到时间：<code>2020-09-29 18:36:49</code></p>
+
+											<p id="checkin-msg"></p>
+
+																				</div>
+
+									<div class="card-action">
+										<div class="card-action-btn pull-left">
+																							<p id="checkin-btn">
+													<button id="checkin" class="btn btn-brand btn-flat waves-attach waves-effect"><span class="icon">check</span>&nbsp;签到</button>
+												</p>
+																					</div>
+									</div>
+
+								</div>
+							</div>
+
+
+						
+						<div aria-hidden="true" class="modal modal-va-middle fade" id="result" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-xs">
+		<div class="modal-content">
+			<div class="modal-inner">
+				<p class="h5 margin-top-sm text-black-hint" id="msg"></p>
+			</div>
+			<div class="modal-footer">
+				<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button" id="result_ok">知道了</button></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+					</div>
+
+
+				</div>
+			</section>
+		</div>
+	</main>
+
+
+
+
+
+
+
+	<footer class="ui-footer">
+		<div class="container">
+			© MAYING   <a href="https://www.maying.co/staff">STAFF</a> 		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="./MAYING_files/jquery.min.js"></script>
+	<script src="./MAYING_files/jquery.validate.min.js"></script>
+	<script src="./MAYING_files/gt.js"></script>
+	
+	<script src="./MAYING_files/base.min.js"></script>
+	<script src="./MAYING_files/project.min.js"></script>
+	<script src="./MAYING_files/clipboard.min.js"></script>
+	
+
+
+
+<script src="./MAYING_files/shake.js"></script>
+
+
+<script>
+;(function(){
+	'use strict'
+
+	let onekeysubBTN = document.querySelectorAll('[data-onekeyfor]');
+	for (let i=0;i<onekeysubBTN.length;i++) {
+		onekeysubBTN[i].addEventListener('click',()=>{
+			let onekeyId = onekeysubBTN[i].dataset.onekeyfor;
+			AddSub(onekeyId);
+		});
+	}
+
+	function AddSub(id){
+		let url = document.getElementById(id).value;
+		let tmp = window.btoa(url);
+		tmp = tmp.substring(0,tmp.length);
+		url = "sub://" + tmp + "#";
+		window.location.href = url;
+	}
+})();
+</script>
+
+<script>
+
+function DateParse(str_date) {
+		var str_date_splited = str_date.split(/[^0-9]/);
+		return new Date (str_date_splited[0], str_date_splited[1] - 1, str_date_splited[2], str_date_splited[3], str_date_splited[4], str_date_splited[5]);
+}
+
+/*
+ * Author: neoFelhz & CloudHammer
+ * https://github.com/CloudHammer/CloudHammer/make-sspanel-v3-mod-great-again
+ * License: MIT license & SATA license
+ */
+function CountDown() {
+    var levelExpire = DateParse("2023-08-09 01:14:21");
+    var accountExpire = DateParse("2026-04-30 01:35:55");
+    var nowDate = new Date();
+    var a = nowDate.getTime();
+    var b = levelExpire - a;
+    var c = accountExpire - a;
+    var levelExpireDays = Math.floor(b/(24*3600*1000));
+    var accountExpireDays = Math.floor(c/(24*3600*1000));
+    if (levelExpireDays < 0 || levelExpireDays > 315360000000) {
+        document.getElementById('days-level-expire').innerHTML = "无限期";
+        for (var i=0;i<document.getElementsByClassName('label-level-expire').length;i+=1){
+            document.getElementsByClassName('label-level-expire')[i].style.display = 'none';
+        }
+    } else {
+        document.getElementById('days-level-expire').innerHTML = levelExpireDays;
+    }
+    if (accountExpireDays < 0 || accountExpireDays > 315360000000) {
+        document.getElementById('days-account-expire').innerHTML = "无限期";
+        for (var i=0;i<document.getElementsByClassName('label-account-expire').length;i+=1){
+            document.getElementsByClassName('label-account-expire')[i].style.display = 'none';
+        }
+    } else {
+        document.getElementById('days-account-expire').innerHTML = accountExpireDays;
+    }
+}
+</script>
+
+<script>
+
+$(function(){
+	new Clipboard('.copy-text');
+});
+
+$(".copy-text").click(function () {
+	$("#result").modal();
+	$("#msg").html("已拷贝订阅链接，请您继续接下来的操作。");
+});
+$(function(){
+	new Clipboard('.reset-link');
+});
+
+$(".reset-link").click(function () {
+	$("#result").modal();
+	$("#msg").html("已重置您的订阅链接，请变更或添加您的订阅链接！");
+	window.setTimeout("location.href='/user/url_reset'", 1000);
+});
+
+ 
+
+var checkedmsgGE = '<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;已签到</a></p>';
+window.onload = function() {
+    var myShakeEvent = new Shake({
+        threshold: 15
+    });
+
+    myShakeEvent.start();
+  	CountDown()
+
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    function shakeEventDidOccur () {
+		if("vibrate" in navigator){
+			navigator.vibrate(500);
+		}
+
+        $.ajax({
+                type: "POST",
+                url: "/user/checkin",
+                dataType: "json",                success: function (data) {
+                    if (data.ret) {
+					$("#checkin-msg").html(data.msg);
+					$("#checkin-btn").html(checkedmsgGE);
+					$("#result").modal();
+					$("#msg").html(data.msg);
+					$('#remain').html(data.traffic);
+					$('.bar.remain.color').css('width',(data.unflowtraffic-(108718576+36851864136))/data.unflowtraffic*100+'%');
+				} else {
+					$("#result").modal();
+					$("#msg").html(data.msg);
+				}
+                },
+                error: function (jqXHR) {
+					$("#result").modal();
+                    $("#msg").html("发生错误：" + jqXHR.status);
+                }
+            });
+    }
+};
+
+
+$(document).ready(function () {
+	$("#checkin").click(function () {
+		$.ajax({
+			type: "POST",
+			url: "/user/checkin",
+			dataType: "json",			success: function (data) {
+				if (data.ret) {
+					$("#checkin-msg").html(data.msg);
+					$("#checkin-btn").html(checkedmsgGE);
+					$("#result").modal();
+					$("#msg").html(data.msg);
+					$('#remain').html(data.traffic);
+					$('.bar.remain.color').css('width',(data.unflowtraffic-(108718576+36851864136))/data.unflowtraffic*100+'%');
+				} else {
+					$("#result").modal();
+					$("#msg").html(data.msg);
+				}
+			},
+			error: function (jqXHR) {
+				$("#result").modal();
+				$("#msg").html("发生错误：" + jqXHR.status);
+			}
+		})
+	})
+})
+
+
+
+
+
+</script></body></html>
