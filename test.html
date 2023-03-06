@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<meta name="theme-color" content="#ff9800">
+	<title>MAYING</title>
+	<!-- css -->
+	<link href="/theme/material/css/base.min.css" rel="stylesheet">
+	<link href="/theme/material/css/project.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.0/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.0/dist/sweetalert2.all.min.js"></script>
+
+	<!-- favicon -->
+	<style>
+		.pagination {
+			display:inline-block;
+			padding-left:0;
+			margin:20px 0;
+			border-radius:4px
+		}
+		.pagination>li {
+			display:inline
+		}
+		.pagination>li>a,.pagination>li>span {
+			position:relative;
+			float:left;
+			padding:6px 12px;
+			margin-left:-1px;
+			line-height:1.42857143;
+			color:#337ab7;
+			text-decoration:none;
+			background-color:#fff;
+			border:1px solid #ddd
+		}
+		.pagination>li:first-child>a,.pagination>li:first-child>span {
+			margin-left:0;
+			border-top-left-radius:4px;
+			border-bottom-left-radius:4px
+		}
+		.pagination>li:last-child>a,.pagination>li:last-child>span {
+			border-top-right-radius:4px;
+			border-bottom-right-radius:4px
+		}
+		.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover {
+			color:#23527c;
+			background-color:#eee;
+			border-color:#ddd
+		}
+		.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover {
+			z-index:2;
+			color:#fff;
+			cursor:default;
+			background-color:#337ab7;
+			border-color:#337ab7
+		}
+		.pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span,.pagination>.disabled>span:focus,.pagination>.disabled>span:hover {
+			color:#777;
+			cursor:not-allowed;
+			background-color:#fff;
+			border-color:#ddd
+		}
+		.pagination-lg>li>a,.pagination-lg>li>span {
+			padding:10px 16px;
+			font-size:18px
+		}
+		.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span {
+			border-top-left-radius:6px;
+			border-bottom-left-radius:6px
+		}
+		.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span {
+			border-top-right-radius:6px;
+			border-bottom-right-radius:6px
+		}
+		.pagination-sm>li>a,.pagination-sm>li>span {
+			padding:5px 10px;
+			font-size:12px
+		}
+		.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span {
+			border-top-left-radius:3px;
+			border-bottom-left-radius:3px
+		}
+		.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span {
+			border-top-right-radius:3px;
+			border-bottom-right-radius:3px
+		}
+		.pager {
+			padding-left:0;
+			margin:20px 0;
+			text-align:center;
+			list-style:none
+		}
+		.pager li {
+			display:inline
+		}
+		.pager li>a,.pager li>span {
+			display:inline-block;
+			padding:5px 14px;
+			background-color:#fff;
+			border:1px solid #ddd;
+			border-radius:15px
+		}
+		.pager li>a:focus,.pager li>a:hover {
+			text-decoration:none;
+			background-color:#eee
+		}
+		.pager .next>a,.pager .next>span {
+			float:right
+		}
+		.pager .previous>a,.pager .previous>span {
+			float:left
+		}
+		.pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span {
+			color:#777;
+			cursor:not-allowed;
+			background-color:#fff
+		}	
+		.pagination>li>a,
+		.pagination>li>span {
+		  border: 1px solid white;
+		}
+		.pagination>li.active>a {
+		  background: #f50057;
+		  color: #fff;
+		}
+		.pagination>li>a {
+		  background: white;
+		  color: #000;
+		}
+		.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+			color: #fff;
+			background-color: #000;
+			border-color: #000;
+		}
+		.pagination>.active>span {
+		  background-color: #f50057;
+		  color: #fff;
+		  border-color: #fff;
+		}
+		.pagination > .disabled > span {
+		  border-color: #fff;
+		}
+		pre {
+			white-space: pre-wrap;
+			word-wrap: break-word;
+		}
+		.progress-green .progress-bar {
+			background-color: #f0231b;
+		}
+		.progress-green {
+			background-color: #000;
+		}
+		.progress-green .progress-bar {
+			background-color: #ff0a00;
+		}
+		.page-orange .ui-content-header {
+			background-image: url(/theme/material/css/images/bg/amber.jpg);
+		}
+		.content-heading {
+			font-weight: 300;
+			color: #fff;
+		}		
+	</style>
+</head>
+<body class="page-orange">
+	<header class="header header-orange header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<div>
+				<a data-toggle="menu" href="#ui_menu">
+					<span class="icon icon-lg text-white">menu</span>
+				</a>
+			</div>
+		</ul>
+		<ul class="nav nav-list pull-right">
+			<div class="dropdown margin-right">
+				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+									<span class="access-hide">whirlwindy</span>
+					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="/images/Avatar.jpg"></span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li>
+							<a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用户中心</a>
+						</li>
+						<li>
+							<a class="padding-right-lg waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a>
+						</li>
+					</ul>
+					
+			</div>
+		</ul>
+	</header>
+	<nav aria-hidden="true" class="menu menu-left nav-drawer nav-drawer-md" id="ui_menu" tabindex="-1" >
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="/""><i class="icon icon-lg">person_pin_circle</i>&nbsp;用户面板</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_me" onmousemove="this.style.backgroundColor='#ffcccc">我的</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_me">
+							<li >
+								<a href="/user">
+									<i class="icon icon-lg">recent_actors</i>&nbsp;首页
+								</a>
+							</li>
+							<li>
+								<a href="/user/profile">
+									<i class="icon icon-lg">info</i>&nbsp;账户信息
+								</a>
+							</li>
+							<li>
+								<a href="/user/edit">
+									<i class="icon icon-lg">sync_problem</i>&nbsp;资料编辑
+								</a>
+							</li>
+							<li>
+								<a href="/user/invite">
+									<i class="icon icon-lg">loyalty</i>&nbsp;邀请码
+								</a>
+							</li>
+							<li>
+								<a href="/user/announcement">
+									<i class="icon icon-lg">announcement</i>&nbsp;查看公告
+								</a>
+							</li>
+							<li>
+								<a href="https://docs.nameless13.com/" target="_blank">
+									<i class="icon icon-lg">announcement</i>&nbsp;使用教程
+								</a>
+							</li>
+													</ul>
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">使用</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_use">
+							<li>
+								<a href="/user/node">
+									<i class="icon icon-lg">router</i>&nbsp;节点列表
+								</a>
+							</li>
+							
+							<li>
+								<a href="/user/trafficlog">
+									<i class="icon icon-lg">traffic</i>&nbsp;流量记录
+								</a>
+							</li>
+
+						</ul>
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_help">交易</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_help">
+							<li>
+								<a href="/user/shop">
+									<i class="icon icon-lg">shop</i>&nbsp;商店
+								</a>
+							</li>
+							<li><a href="/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li>
+							<li>
+								<a href="/user/code" target= _blank>
+									<i class="icon icon-lg">code</i>&nbsp;充值
+								</a>
+							</li>
+						</ul>
+                      <a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_detect">
+							<!-- <li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li> -->
+							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
+						</ul>
+						<a class="waves-attach"  href="/user/logout" href="#ui_menu_use">退出系统</a>
+						                      
+                                                                
+                   
+                                                                
+                                                                
+                                                                
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">用户中心</h1>
+			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="ui-card-wrap">
+
+						<div class="col-lg-6 col-md-6">
+
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">系统中最新公告</p>
+										<p>其他公告请到<a href="/user/announcement"/>公告面板</a>查看。</p>
+																				<p><p>   由于上游BGP供应商的价格政策调整，我们的运营成本已大幅提升，为了保证服务体验、优化运营效率，我们将即刻进行套餐价格调整。调整后的价格请咨询服务BOT或群管理员，在2020年2月27日0点-3月1日10点之前注册并充值的新用户仍按照原价格开通套餐（续费按照新套餐价格），其余新老用户无论开通、续费均适用新调整后的套餐价格，感谢各位的理解与支持</p>
+<p>新套餐价格</p>
+<p>VIP3,季付180  node 30+/ 400G每月， 年付600  node 30+/ 500G每月，</p>
+<p>VIP4 半年付480 node 60+/ 800G每月，年付800  node 60+/ 900G每月</p>
+</p>
+																			</div>
+
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">连接信息 以及 All-in-One(快速配置指导)</p>
+										<p>您可以在这里查看您的连接信息。<br>同时，这里为您提供了自动化地配置文件生成，包含了所有 Shadowsocks 服务器的信息，方便您在诸多的服务器中快速添加，快速切换。</p>
+										<nav class="tab-nav margin-top-no">
+											<ul class="nav nav-list">
+												<li class="active">
+													<a class="waves-attach" data-toggle="tab" href="#all_ssr"><i class="icon icon-lg">airplanemode_active</i>&nbsp;ShadowsocksR</a>
+												</li>
+											</ul>
+										</nav>
+										<div class="card-inner">
+											<div class="tab-content">
+												<div class="tab-pane fade active in" id="all_ssr">
+													
+													<nav class="tab-nav margin-top-no">
+														<ul class="nav nav-list">
+															<li class="active">
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
+															</li>
+															<li>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
+															</li>
+															<li>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_ios"><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS</a>
+															</li>
+															<li>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
+															</li>
+															<li>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
+															</li>
+														</ul>
+													</nav>
+
+													<div class="tab-pane fade active in" id="all_ssr_windows">
+														<p>
+															Windows客户端：
+															<ol>
+																<li style="line-height:26px;"><a href="https://raw.nameless13.com/api/public/dl/uRjeavsM/SSR.7z">ShadowsocksR-Windows</a></li>
+																<li style="line-height:26px;"><a href="https://github.com/FQrabbit/SSTap-Rule/releases/download/SSTap%E5%B8%B8%E7%94%A8%E7%89%88%E6%9C%AC%E5%8F%8A%E5%8E%BB%E5%B9%BF%E5%91%8A/SSTap-beta-setup-1.0.9.7.exe.7z">SSTap-beta-setup-1.0.9.7</a></li>
+																<li style="line-height:26px;"><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">原版Clash</a><a style="color: #000;padding-left: 20px;" target="_blank" href="https://api.nameless13.com/">Clash订阅地址转换</a></li>
+															
+															</ol>
+														</p>
+
+														<p>SSR单端口多用户订阅地址：<br>
+                                                                                                                    <p>订阅地址(主)：<br><code style="font-size: 13px;">https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1 </code><br></p>
+                                                         	<p>订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&token=u7g5cCYF0ZY2ibmY</code></p>	
+															
+															
+                                                          														</p>
+
+														<p>原版Clash(主)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sh%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+														<p>原版Clash(备)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sx/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sx%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+													</div>
+													<div class="tab-pane fade" id="all_ssr_mac">
+														<p>
+															MacOS 客户端：
+															<ol>
+																<li style="line-height:26px;"><a target="_blank" href="https://github.com/paradiseduo/ShadowsocksX-NG-R8/releases">ShadowsocksX-NG-R8</a></li>
+															
+																<li style="line-height:26px;"><a target="_blank" href="https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public">ClashX Pro</a></li>
+															</ol>
+														</p>
+														<p>SSR单端口多用户订阅地址：<br>
+                                                                                                                      <p>订阅地址(主)：<br><code style="font-size: 13px;">https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1</code><br></p>
+															
+															<p>	订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&token=u7g5cCYF0ZY2ibmY</code>	
+                                                           														</p>
+														<p>ClashX(主)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sh%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+														<p>ClashX(备)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sx/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sx%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+													</div>
+													<div class="tab-pane fade" id="all_ssr_ios">
+														<p>
+															IOS 客户端(IOS客户端需要有美区或者港区的apple ID，并需付费下载，本站不提供下载账号)：
+															<ol>
+																<li style="line-height:26px;"><a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8" target="_blank">Shadowrocket</a> </li>
+																<li style="line-height:26px;"><a href="https://appsto.re/us/o1dOkb.i" target="_blank">Quantumult</a>&nbsp;&nbsp;目前美区暂时下架，可以在港区下载</li>
+																<li style="line-height:26px;"><a href="https://apps.apple.com/hk/app/quantumult-x/id1443988620">Quantumult X </a> </li>
+															</ol>
+														</p>
+														<p>SSR单端口多用户订阅地址：<br>
+                                                          															订阅地址(主)：<br><code>https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1</code><br>
+															订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&token=u7g5cCYF0ZY2ibmY</code>		
+                                                           														</p>
+													</div>
+													<div class="tab-pane fade" id="all_ssr_android">
+														<p>
+															Android 手机客户端
+															<ol>
+																<li style="line-height:26px;"><a target="_blank" href="https://github.com/xxf098/shadowsocksr-v2ray-trojan-android/releases">ShadowsocksR-Android</a></li>
+																<li style="line-height:26px;"><a target="_blank" href="https://github.com/Kr328/ClashForAndroid/releases">原版Clash-Android app-arm64-v8a
+</a></li>													
+															</ol>
+														</p>
+														<p>SSR单端口多用户订阅地址：<br>
+                                                          															订阅地址(主)：<br><code>https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1</code><br>
+															订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&token=u7g5cCYF0ZY2ibmY</code>	
+                                                           														</p>
+														<p>ClashX(主)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sh%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+														<p>ClashX(备)：<br>
+														  														  	<a class="btn-dl" href="https://sub.ssr.sx/link/u7g5cCYF0ZY2ibmY?clash=2"> 配置文件下载</a>                                                                                                                    .
+                                                              <a class="btn-dl" href="clash://install-config?url=https%3A%2F%2Fsub.ssr.sx%2Flink%2Fu7g5cCYF0ZY2ibmY?clash=2"> 配置一键导入</a>
+														  														</p>
+													</div>
+													<div class="tab-pane fade" id="all_ssr_router">
+														<p>
+															路由器插件：
+															<ol>
+																<li style="line-height:26px;"><a href="https://github.com/hq450/fancyss_history_package" target="_blank">Koolshare 固件路由器/软路由</a>
+																	</li>
+																<li style="line-height:26px;"><a href="https://drive.google.com/drive/folders/1dqNUrMf9n7i3y1aSh68U5Yf44WQ3KCuh">eSir-openwrt固件相关</a></li>
+																<li><a href="http://opt.cn2qq.com/padavan/">Padavan（老毛子）固件</a></li>
+															</ol>
+														</p>
+														订阅地址(主)：<br><code>https://sub.ssr.sh/link/u7g5cCYF0ZY2ibmY?mu=1</code><br>
+														订阅地址(备)：<br><code>https://subserver.maying.io/Subscription/ShadowRocketImportService?sid=8853&token=u7g5cCYF0ZY2ibmY</code>														
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-action">
+											<div class="card-action-btn pull-left">
+												<p><a class="btn btn-brand btn-flat waves-attach" href="/user/url_reset"><span class="icon">close</span>&nbsp;重置订阅地址（重置订阅地址前请先在[资料编辑]里修改链接密码）</a></p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">帐号使用情况</p>
+										<dl class="dl-horizontal">
+										  <p><dt>帐号等级：
+																								<span style="color: #ff4081;">VIP5</span>
+												                                           	
+                                            </dt>
+											</p> 
+											<p><dt>等级过期时间：2023年08月09日</dt></p>
+											<p><span>流量重置日：23 号</span></p> 											<p>等级有效期：                                             
+                                              <span class="label-level-expire">剩余</span>
+											  <span id="days-level-expire" style="color: #ff4081;"></span>
+                                              <span class="label-level-expire">天</span>
+                                            </p>
+								
+											<p><dt>速度限制：
+											<span>不限速</span>
+										       </dt>
+											</p>                                         
+                                            <p><dt>实时连接数：1 个</dt></p>
+                                          <p><dt>最大连接数：<span>
+                                            
+                                            												<span>6 个</span>
+												       
+                                            
+                                            
+                                             <!--
+                                            0 个</span> </dt></p>
+                                           -->
+                                          
+                                            <!-- <p><dt>最大设备数：
+											                                            <span>不限制</span>
+											</dt>
+										</p> -->
+                                          
+											<p><dt>上次使用：2023年03月06日</dt></p>
+										</dl>
+										
+									</div>
+
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">流量使用情况</p>
+											<p><dt>总流量：1000GB</dt></p>
+											<p><dt>已使用： 34.42GB</dt></p> 
+											<!--<p><dt>已使用：34.42GB</dt></p> -->
+											<p><dt>剩余量： 965.58GB</dt></p>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">服务BOT</p>
+											<p><dt><a href="tg://resolve?domain=mayingbot" style="color: #ff4081;text-decoration:underline;">魅影极速套餐开通、升级服务Bot</a></dt></p>
+											<p><dt><a href="tg://resolve?domain=mayingsupportbot" style="color: #ff4081;text-decoration:underline;">客户服务BOT</a></dt></p> 
+										
+											
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading" style="border-bottom: 1px solid rgba(0,0,0,.12);padding-bottom: 10px;">签到获取流量</p>
+											<p>流量不会重置，可以通过签到获取流量。</p>
+
+											<p>每次签到可以获取30~50MB流量。</p>
+
+											<p>每天可以签到一次。您可以点击按钮或者摇动手机来签到。</p>
+
+											<p>上次签到时间：<code>2020-09-29 18:36:49</code></p>
+
+											<p id="checkin-msg"></p>
+
+																				</div>
+
+									<div class="card-action">
+										<div class="card-action-btn pull-left">
+																							<p id="checkin-btn">
+													<button id="checkin" class="btn btn-brand btn-flat waves-attach"><span class="icon">check</span>&nbsp;签到</button>
+												</p>
+																					</div>
+									</div>
+
+								</div>
+							</div>
+
+
+						
+						<div aria-hidden="true" class="modal modal-va-middle fade" id="result" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-xs">
+		<div class="modal-content">
+			<div class="modal-inner">
+				<p class="h5 margin-top-sm text-black-hint" id="msg"></p>
+			</div>
+			<div class="modal-footer">
+				<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" type="button" id="result_ok">知道了</button></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+					</div>
+
+
+				</div>
+			</section>
+		</div>
+	</main>
+
+
+
+
+
+
+
+	<footer class="ui-footer">
+		<div class="container">
+			&copy; MAYING   <a href="/staff">STAFF</a> 		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="//cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
+	<script src="//cdn.staticfile.org/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="//static.geetest.com/static/tools/gt.js"></script>
+	
+	<script src="/theme/material/js/base.min.js"></script>
+	<script src="/theme/material/js/project.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script>
+	
+</body>
+</html>
+
+<script src="/theme/material/js/shake.js/shake.js"></script>
+
+
+<script>
+;(function(){
+	'use strict'
+
+	let onekeysubBTN = document.querySelectorAll('[data-onekeyfor]');
+	for (let i=0;i<onekeysubBTN.length;i++) {
+		onekeysubBTN[i].addEventListener('click',()=>{
+			let onekeyId = onekeysubBTN[i].dataset.onekeyfor;
+			AddSub(onekeyId);
+		});
+	}
+
+	function AddSub(id){
+		let url = document.getElementById(id).value;
+		let tmp = window.btoa(url);
+		tmp = tmp.substring(0,tmp.length);
+		url = "sub://" + tmp + "#";
+		window.location.href = url;
+	}
+})();
+</script>
+
+<script>
+
+function DateParse(str_date) {
+		var str_date_splited = str_date.split(/[^0-9]/);
+		return new Date (str_date_splited[0], str_date_splited[1] - 1, str_date_splited[2], str_date_splited[3], str_date_splited[4], str_date_splited[5]);
+}
+
+/*
+ * Author: neoFelhz & CloudHammer
+ * https://github.com/CloudHammer/CloudHammer/make-sspanel-v3-mod-great-again
+ * License: MIT license & SATA license
+ */
+function CountDown() {
+    var levelExpire = DateParse("2023-08-09 01:14:21");
+    var accountExpire = DateParse("2026-04-30 01:35:55");
+    var nowDate = new Date();
+    var a = nowDate.getTime();
+    var b = levelExpire - a;
+    var c = accountExpire - a;
+    var levelExpireDays = Math.floor(b/(24*3600*1000));
+    var accountExpireDays = Math.floor(c/(24*3600*1000));
+    if (levelExpireDays < 0 || levelExpireDays > 315360000000) {
+        document.getElementById('days-level-expire').innerHTML = "无限期";
+        for (var i=0;i<document.getElementsByClassName('label-level-expire').length;i+=1){
+            document.getElementsByClassName('label-level-expire')[i].style.display = 'none';
+        }
+    } else {
+        document.getElementById('days-level-expire').innerHTML = levelExpireDays;
+    }
+    if (accountExpireDays < 0 || accountExpireDays > 315360000000) {
+        document.getElementById('days-account-expire').innerHTML = "无限期";
+        for (var i=0;i<document.getElementsByClassName('label-account-expire').length;i+=1){
+            document.getElementsByClassName('label-account-expire')[i].style.display = 'none';
+        }
+    } else {
+        document.getElementById('days-account-expire').innerHTML = accountExpireDays;
+    }
+}
+</script>
+
+<script>
+
+$(function(){
+	new Clipboard('.copy-text');
+});
+
+$(".copy-text").click(function () {
+	$("#result").modal();
+	$("#msg").html("已拷贝订阅链接，请您继续接下来的操作。");
+});
+$(function(){
+	new Clipboard('.reset-link');
+});
+
+$(".reset-link").click(function () {
+	$("#result").modal();
+	$("#msg").html("已重置您的订阅链接，请变更或添加您的订阅链接！");
+	window.setTimeout("location.href='/user/url_reset'", 1000);
+});
+
+ 
+
+var checkedmsgGE = '<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;已签到</a></p>';
+window.onload = function() {
+    var myShakeEvent = new Shake({
+        threshold: 15
+    });
+
+    myShakeEvent.start();
+  	CountDown()
+
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    function shakeEventDidOccur () {
+		if("vibrate" in navigator){
+			navigator.vibrate(500);
+		}
+
+        $.ajax({
+                type: "POST",
+                url: "/user/checkin",
+                dataType: "json",                success: function (data) {
+                    if (data.ret) {
+					$("#checkin-msg").html(data.msg);
+					$("#checkin-btn").html(checkedmsgGE);
+					$("#result").modal();
+					$("#msg").html(data.msg);
+					$('#remain').html(data.traffic);
+					$('.bar.remain.color').css('width',(data.unflowtraffic-(108718576+36851864136))/data.unflowtraffic*100+'%');
+				} else {
+					$("#result").modal();
+					$("#msg").html(data.msg);
+				}
+                },
+                error: function (jqXHR) {
+					$("#result").modal();
+                    $("#msg").html("发生错误：" + jqXHR.status);
+                }
+            });
+    }
+};
+
+
+$(document).ready(function () {
+	$("#checkin").click(function () {
+		$.ajax({
+			type: "POST",
+			url: "/user/checkin",
+			dataType: "json",			success: function (data) {
+				if (data.ret) {
+					$("#checkin-msg").html(data.msg);
+					$("#checkin-btn").html(checkedmsgGE);
+					$("#result").modal();
+					$("#msg").html(data.msg);
+					$('#remain').html(data.traffic);
+					$('.bar.remain.color').css('width',(data.unflowtraffic-(108718576+36851864136))/data.unflowtraffic*100+'%');
+				} else {
+					$("#result").modal();
+					$("#msg").html(data.msg);
+				}
+			},
+			error: function (jqXHR) {
+				$("#result").modal();
+				$("#msg").html("发生错误：" + jqXHR.status);
+			}
+		})
+	})
+})
+
+
+
+
+
+</script>
