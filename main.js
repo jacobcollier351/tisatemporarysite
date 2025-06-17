@@ -21,22 +21,41 @@ playPauseButton.addEventListener('click', function() {
 fetch(urlPrefix + "index.json")
     .then(response => response.json())
     .then(data => {
-        data.audios.reverse().forEach(function(audio, index) {
-            // 检查音频的id是否以"S08_2023_Conscious_Breathing"开头
+        // 按album分组音频
+        let groupedAudios = {};
+        data.audios.reverse().forEach(audio => {
             if (audio.id.startsWith("S")) {
-                console.log(audio.id);
-                // 创建一个新的列表项元素并设置其内容
+                let album = audio.id.split('/')[0]; // 获取album名称（ID中斜杠前的部分）
+                if (!groupedAudios[album]) {
+                    groupedAudios[album] = [];
+                }
+                groupedAudios[album].push(audio);
+            }
+        });
+
+        // 遍历分组并添加到列表
+        Object.keys(groupedAudios).forEach(album => {
+            // 添加album分隔符
+            let delimiter = document.createElement('li');
+            delimiter.textContent = album;
+            delimiter.style.fontWeight = 'bold';
+            delimiter.style.padding = '10px';
+            delimiter.style.paddingLeft = '550px';
+            delimiter.style.backgroundColor = '#e0e0e0';
+            audioList.appendChild(delimiter);
+
+            // 添加该album下的音频
+            groupedAudios[album].forEach(audio => {
                 let listItem = document.createElement('li');
                 listItem.textContent = audio.name_cn + " (" + audio.duration + ")";
-                listItem.dataset.url = urlPrefix + audio.id;  // 在元素上存储完整的音频URL
+                listItem.dataset.url = urlPrefix + audio.id;
                 listItem.addEventListener('click', function() {
-                    // 当列表项被点击时，将音频URL设置为播放器的源并播放
                     player.src = listItem.dataset.url;
                     player.play();
-                    playPauseButton.textContent = '⏸️';  // 更新按钮文本
+                    playPauseButton.textContent = '⏸️';
                 });
                 audioList.appendChild(listItem);
-            }
+            });
         });
     })
     .catch(error => console.error('Error:', error));
