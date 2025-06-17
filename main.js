@@ -35,14 +35,6 @@ fetch(urlPrefix + "index.json")
 
         // 遍历分组并添加到列表
         Object.keys(groupedAudios).forEach(album => {
-            // 添加album分隔符
-            let delimiter = document.createElement('li');
-            delimiter.textContent = album;
-            delimiter.style.fontWeight = 'bold';
-            delimiter.style.padding = '10px';
-            delimiter.style.paddingLeft = '550px';
-            delimiter.style.backgroundColor = '#e0e0e0';
-            audioList.appendChild(delimiter);
 
             // 添加该album下的音频
             groupedAudios[album].forEach(audio => {
@@ -56,6 +48,16 @@ fetch(urlPrefix + "index.json")
                 });
                 audioList.appendChild(listItem);
             });
+
+            // 添加album分隔符
+            let delimiter = document.createElement('li');
+            delimiter.textContent = album;
+            delimiter.style.fontWeight = 'bold';
+            delimiter.style.padding = '10px';
+            delimiter.style.paddingLeft = '550px';
+            delimiter.style.backgroundColor = '#e0e0e0';
+            audioList.appendChild(delimiter);
+            
         });
     })
     .catch(error => console.error('Error:', error));
