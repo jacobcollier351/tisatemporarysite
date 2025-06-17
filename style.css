@@ -93,11 +93,4 @@ audio::-webkit-media-controls-play-button:before {
     background: transparent;
 }
 
-.delimiter {
-    font-weight: bold;
-    padding: 10px;
-    padding-left: 550px;
-    background-color: #e0e0e0;
-    border-bottom: 2px solid #ccc;
-}
 
