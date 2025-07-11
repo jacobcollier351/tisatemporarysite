@@ -44,7 +44,7 @@ fetch(urlPrefix + "index.json")
                 listItem.addEventListener('click', function() {
                     player.src = listItem.dataset.url;
                     player.play();
-                    playPauseButton.textContent = '⏸️';
+                   // playPauseButton.textContent = '⏸️';
                 });
                 audioList.appendChild(listItem);
             });
