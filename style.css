@@ -13,13 +13,13 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
-
-#player-title {
+/* 
+player-title {
     margin:0px;
     margin-bottom:10px;
 }
 
-#play-pause {
+play-pause {
     padding: 10px;
     background-color: #f1f1f1;
     border: none;
@@ -28,7 +28,7 @@ body {
     position:absolute;
     top:0px;
     
-}
+} */
 
 .audio-list-container {
     width: 100%;
