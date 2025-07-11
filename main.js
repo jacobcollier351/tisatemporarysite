@@ -1,21 +1,21 @@
 // 获取元素
 let audioList = document.getElementById('audio-list');
 let player = document.getElementById('player');
-let playPauseButton = document.getElementById('play-pause');
+//let playPauseButton = document.getElementById('play-pause');
 
 // 音频URL前缀
 let urlPrefix = "https://cloudflare-cors-anywhere.andyhu0777.workers.dev/?https://cdn.totality-of-life.com/";
 
 // 为播放/暂停按钮添加点击事件
-playPauseButton.addEventListener('click', function() {
-    if (player.paused) {
-        player.play();
-        playPauseButton.textContent = '⏸️';
-    } else {
-        player.pause();
-        playPauseButton.textContent = '▶️';
-    }
-});
+// playPauseButton.addEventListener('click', function() {
+//     if (player.paused) {
+//         player.play();
+//         playPauseButton.textContent = '⏸️';
+//     } else {
+//         player.pause();
+//         playPauseButton.textContent = '▶️';
+//     }
+// });
 
 // 从服务器获取JSON数据
 fetch(urlPrefix + "index.json")
