@@ -54,7 +54,6 @@ fetch(urlPrefix + "index.json")
             delimiter.textContent = album;
             delimiter.style.fontWeight = 'bold';
             delimiter.style.padding = '10px';
-            delimiter.style.paddingLeft = '550px';
             delimiter.style.backgroundColor = '#e0e0e0';
             audioList.appendChild(delimiter);
             
