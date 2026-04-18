@@ -81,3 +81,9 @@ html {
     font-weight: bold;
     color: #0f5132;
 }
+
+audio {
+    width: 100%;
+    max-width: 606px; /* Keeps it aligned with your list container */
+    margin-bottom: 10px; /* Adds a little space between the player and your new label */
+}
