@@ -84,7 +84,7 @@ html {
 
 audio {
     width: 100%;
-    height: 30px;
+    height: 50px;
     display: block;
     max-width: 606px; /* Keeps it aligned with your list container */
     margin-bottom: 10px; /* Adds a little space between the player and your new label */
