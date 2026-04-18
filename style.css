@@ -53,7 +53,7 @@ html {
     width: 100%;
     height: calc(100% - 80px);
     max-width: 600px;
-    overflow-y: auto; /* Ensure this is uncommented so the list can scroll */
+    /*overflow-y: auto; /* Ensure this is uncommented so the list can scroll */
 }
 
 #audio-list {
